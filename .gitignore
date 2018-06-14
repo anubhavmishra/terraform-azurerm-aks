@@ -1,0 +1,4 @@
+.terraform
+.ssh
+env.sh
+terraform.tfstate*
