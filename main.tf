@@ -62,6 +62,7 @@ resource "azurerm_kubernetes_cluster" "aks_demo" {
 
 ## Outputs ##
 
+# Example attributes available for output
 #output "id" {
 #    value = "${azurerm_kubernetes_cluster.aks_demo.id}"
 #}
