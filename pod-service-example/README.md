@@ -25,5 +25,5 @@ load balancer to be available.*
 Check whether pod, service, and namespace is created successfully
 
 ```bash
-kubectl get pods,services,namspace
+kubectl get pods,services,namespace
 ```
