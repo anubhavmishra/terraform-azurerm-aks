@@ -97,9 +97,28 @@ terraform apply
 
 Configure kubeconfig
 
+Instructions can be obtained by running the following command
+
+```bash
+terraform output configure
+
+Run the following commands to configure kubernetes client:
+
+$ terraform output kube_config > ~/.kube/aksconfig
+$ export KUBECONFIG=~/.kube/aksconfig
+
+Test configuration using kubectl
+
+$ kubectl get nodes
+```
+
+Save kubernetes config file to `~/.kube/aksconfig`
+
 ```bash
 terraform output kube_config > ~/.kube/aksconfig
 ```
+
+Set `KUBECONFIG` environment variable to the kubernetes config file
 
 ```bash
 export KUBECONFIG=~/.kube/aksconfig
