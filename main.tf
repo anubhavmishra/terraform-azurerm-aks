@@ -2,10 +2,12 @@
 provider "azurerm" {
   version = "=1.5.0"
 }
+
 ## Private key for the kubernetes cluster ##
 resource "tls_private_key" "key" {
   algorithm   = "RSA"
 }
+
 ## Save the private key in the local workspace ##
 resource "null_resource" "save-key" {
   triggers {
@@ -28,7 +30,7 @@ resource "azurerm_resource_group" "aks_demo" {
 }
 
 ## AKS kubernetes cluster ##
-resource "azurerm_kubernetes_cluster" "aks_demo" {
+resource "azurerm_kubernetes_cluster" "aks_demo" { 
   name                = "${var.cluster_name}"
   location            = "${azurerm_resource_group.aks_demo.location}"
   resource_group_name = "${azurerm_resource_group.aks_demo.name}"
