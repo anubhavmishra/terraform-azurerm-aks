@@ -63,6 +63,8 @@ terraform init
 
 ```bash
 
+Initializing the backend...
+
 Initializing provider plugins...
 
 The following providers do not have any version constraints in configuration,
@@ -73,8 +75,8 @@ changes, it is recommended to add version = "..." constraints to the
 corresponding provider blocks in configuration, with the constraint strings
 suggested below.
 
-* provider.null: version = "~> 1.0"
-* provider.tls: version = "~> 1.1"
+* provider.null: version = "~> 2.1"
+* provider.tls: version = "~> 2.1"
 
 Terraform has been successfully initialized!
 
@@ -133,8 +135,8 @@ kubectl get nodes
 ```
 
 ```bash
-NAME                     STATUS    ROLES     AGE       VERSION
-aks-default-75135322-0   Ready     agent     23m       v1.9.6
-aks-default-75135322-1   Ready     agent     23m       v1.9.6
-aks-default-75135322-2   Ready     agent     23m       v1.9.6
+NAME                     STATUS   ROLES   AGE   VERSION
+aks-default-75135322-0   Ready    agent   18m   v1.13.12
+aks-default-75135322-1   Ready    agent   18m   v1.13.12
+aks-default-75135322-2   Ready    agent   18m   v1.13.12
 ```
