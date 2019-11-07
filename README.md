@@ -140,3 +140,7 @@ aks-default-75135322-0   Ready    agent   18m   v1.13.12
 aks-default-75135322-1   Ready    agent   18m   v1.13.12
 aks-default-75135322-2   Ready    agent   18m   v1.13.12
 ```
+Kubernetes Dashboard 
+```
+http://localhost:8001/api/v1/namespaces/kube-system/services/kubernetes-dashboard/proxy/#!/overview?namespace=default
+```
