@@ -1,8 +1,4 @@
 ## Azure config variables ##
-variable "client_id" {}
-
-variable "client_secret" {}
-
 variable location {
   default = "Central US"
 }

@@ -1,6 +1,7 @@
 ## Azure resource provider ##
 provider "azurerm" {
-  version = "=1.36.1"
+  version = "=2.20.0"
+  features {}
 }
 
 ## Azure resource group for the kubernetes cluster ##
@@ -25,17 +26,14 @@ resource "azurerm_kubernetes_cluster" "aks_demo" {
     }
   }
 
-  agent_pool_profile {
-    name            = "default"
-    count           = var.agent_count
-    vm_size         = "Standard_D2"
-    os_type         = "Linux"
-    os_disk_size_gb = 30
+  default_node_pool {
+    name       = "default"
+    node_count = var.agent_count
+    vm_size    = "Standard_D2_v2"
   }
 
-  service_principal {
-    client_id     = var.client_id
-    client_secret = var.client_secret
+  identity {
+    type = "SystemAssigned"
   }
 
   tags = {
@@ -67,19 +65,19 @@ EOF
 
 # Example attributes available for output
 output "id" {
-    value = "${azurerm_kubernetes_cluster.aks_demo.id}"
+    value = azurerm_kubernetes_cluster.aks_demo.id
 }
 
 output "client_key" {
-  value = "${azurerm_kubernetes_cluster.aks_demo.kube_config.0.client_key}"
+  value = azurerm_kubernetes_cluster.aks_demo.kube_config.0.client_key
 }
 
 output "client_certificate" {
-  value = "${azurerm_kubernetes_cluster.aks_demo.kube_config.0.client_certificate}"
+  value = azurerm_kubernetes_cluster.aks_demo.kube_config.0.client_certificate
 }
 
 output "cluster_ca_certificate" {
-  value = "${azurerm_kubernetes_cluster.aks_demo.kube_config.0.cluster_ca_certificate}"
+  value = azurerm_kubernetes_cluster.aks_demo.kube_config.0.cluster_ca_certificate
 }
 
 output "kube_config" {
