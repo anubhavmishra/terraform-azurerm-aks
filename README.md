@@ -7,7 +7,7 @@ This repository contains HashiCorp Terraform configuration required to create a 
 * [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest) installed.
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) installed.
 * HashiCorp [Terraform](https://terraform.io/downloads.html) installed.
-* Terraform version: `0.12.x`
+* Terraform version: `0.13.x`
 * [Azure Provider](https://www.terraform.io/docs/providers/azurerm/index.html) version: `1.36.1`
 
 ### Clone the Github repository
