@@ -8,7 +8,7 @@ This repository contains HashiCorp Terraform configuration required to create a 
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) installed.
 * HashiCorp [Terraform](https://terraform.io/downloads.html) installed.
 * Terraform version: `0.13.x`
-* [Azure Provider](https://www.terraform.io/docs/providers/azurerm/index.html) version: `1.36.1`
+* [Azure Provider](https://www.terraform.io/docs/providers/azurerm/index.html) version: `2.20.0`
 
 ### Clone the Github repository
 
